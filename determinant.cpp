@@ -87,7 +87,7 @@ Determinant::Element Determinant::get_sum() const
 
 #else
 
-long long Determinant::m_get_sum() const
+Determinant::Element Determinant::m_get_sum() const
 {
     if (n==1)
     {
@@ -97,7 +97,7 @@ long long Determinant::m_get_sum() const
         return 0;
     }
 
-    long long sum = 0;
+    Determinant::Element sum = 0;
     for(uint64_t j=0; j<n; ++j)
     {
         if (det[0][j] == 0) continue;
